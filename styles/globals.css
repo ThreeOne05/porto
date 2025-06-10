@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+} */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom radial gradient backgrounds, dengan efek seolah "tersambung" */
+.bg-radial-1 {
+  background: radial-gradient(circle at 30% 50%, #fff 0%, #222 100%);
+}
+.bg-radial-2 {
+  background: radial-gradient(circle at 70% 50%, #fff 0%, #222 100%);
+}
+.bg-radial-3 {
+  background: radial-gradient(circle at 30% 50%, #222 0%, #fff 120%);
+}
+.bg-radial-4 {
+  background: radial-gradient(circle at 70% 50%, #222 0%, #fff 120%);
+}
